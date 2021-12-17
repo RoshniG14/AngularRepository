@@ -1,1 +1,93 @@
 
+TASK 1:-
+
+class Product
+{
+    public id:number =0;
+    public name:string= "";
+
+    constructor(id:number=0, name:string="", public city:string="")
+    {
+        this.id= id;
+        this.name= name;
+    }
+
+    public showDetails()
+    {
+        console.log(`Customer Details :: Id:${this.id}, Name:${this.name}, City:${this.city}`);
+    }
+}
+
+let c1:Product = new Product();
+c1.showDetails();
+let c2:Product = new Product(10256);
+c2.showDetails();
+let c3:Product = new Product(10256, "Jack");
+c3.showDetails();
+let c4:Product = new Product(10256, "Jack", "pune");
+c4.showDetails();
+
+
+
+TASK 2:-
+
+
+
+class Product1
+{
+    private productId:number = 0;
+    private productName:string  = "";
+    private unitPrice:number=0;
+    private quantity:number=0;
+  constructor(ProductId:number)
+    {
+
+        this.productId = ProductId;
+
+    }
+
+    get ProductId():number
+
+    {
+
+        return this.ProductId;
+
+    }  
+   
+      get ProductName():string
+    {
+        return this.ProductName;
+    }
+
+     set ProductName(pname:string)
+    {
+        this.ProductName = pname;
+    }
+    get UnitPrice():number
+    {
+        return this.UnitPrice;
+    }
+
+     set UnitPrice(price:number)
+    {
+        this.UnitPrice = price;
+    }
+     get Quantity():number
+    {
+        return this.Quantity;
+    }
+
+     set Quantity(quantity:number)
+    {
+        this.Quantity = quantity;
+    }
+
+}
+let P:Product1 = new Product1(1);
+
+   
+P.ProductName = "HP Laptop"; 
+P.UnitPrice=50000;
+P.Quantity=1;
+console.log(`Product Details :: Id : ${P.ProductId}, Name : ${P.ProductName}, Unit Price : ${P.UnitPrice}, Quantity : ${P.Quantity}`);  
+
